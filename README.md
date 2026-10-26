@@ -563,16 +563,6 @@ TaskFlow-Project Management Dashboard/
 
 ---
 
-## Future Roadmap
 
-Planned enhancements for future iterations:
-- [ ] **Interactive Kanban View:** Drag-and-drop task workflow columns (Pending $\rightarrow$ In Progress $\rightarrow$ Completed).
-- [ ] **Team Collaboration & Auth:** User accounts, project ownership, and multi-member team assignments.
-- [ ] **Activity Audit Log:** Event logging tracking timeline changes for task status and project edits.
-- [ ] **Export & Reporting:** Export project milestone summaries and task lists to CSV and PDF formats.
 
----
 
-## License
-
-This project is licensed under the [MIT License](LICENSE) — free for use in personal, educational, and commercial portfolios.

@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  /* Apple-inspired Charcoal, Grey & Muted Teal Palette */
+  --background: #111111;
+  --surface: #1C1C1C;
+  --surface-elevated: #242424;
+  --surface-hover: #2B2B2B;
+  --surface-active: #323232;
+  --border: #343434;
+  --border-subtle: #262626;
+  --border-focus: #72C7BE;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #B5B5B5;
+  --text-muted: #8A8A8A;
+
+  --accent: #72C7BE;
+  --accent-hover: #8AD8CF;
+  --accent-subtle: rgba(114, 199, 190, 0.12);
+  --accent-text: #72C7BE;
+
+  /* Status Colors */
+  --success: #72C7A5;
+  --warning: #E5BE72;
+  --danger: #EF7777;
+  --info: #82B8E8;
+
+  --status-active-bg: rgba(114, 199, 190, 0.12);
+  --status-active-text: #72C7BE;
+  --status-active-border: rgba(114, 199, 190, 0.28);
+
+  --status-completed-bg: rgba(114, 199, 165, 0.12);
+  --status-completed-text: #72C7A5;
+  --status-completed-border: rgba(114, 199, 165, 0.28);
+
+  --status-on-hold-bg: rgba(229, 190, 114, 0.12);
+  --status-on-hold-text: #E5BE72;
+  --status-on-hold-border: rgba(229, 190, 114, 0.28);
+
+  --status-pending-bg: rgba(181, 181, 181, 0.10);
+  --status-pending-text: #B5B5B5;
+  --status-pending-border: rgba(181, 181, 181, 0.22);
+
+  --status-in-progress-bg: rgba(130, 184, 232, 0.12);
+  --status-in-progress-text: #82B8E8;
+  --status-in-progress-border: rgba(130, 184, 232, 0.28);
+
+  --status-destructive-bg: rgba(239, 119, 119, 0.12);
+  --status-destructive-text: #EF7777;
+  --status-destructive-border: rgba(239, 119, 119, 0.28);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-active: var(--surface-active);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-focus: var(--border-focus);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-text: var(--accent-text);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Button & Action Control Horizontal Alignment Guarantee */
+.button-content {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.button-content svg,
+button svg {
+  flex-shrink: 0;
+}
+
+/* Prevent unwanted wrapping of buttons */
+button,
+[role="button"] {
+  white-space: nowrap;
+}
+
+/* Accessible focus ring utility */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Ensure Next.js dev indicator badge is completely removed */
+nextjs-portal,
+[data-nextjs-dev-indicator],
+[data-nextjs-toast],
+div[data-nextjs-dialog-overlay] {
+  display: none !important;
+}
